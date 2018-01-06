@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "name": "Admiral Ackbar",
+    "image": "/images/akbar.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Boba Fett",
+    "image": "/images/boba.jpg"
+
+  },
+  {
+    "id": 3,
+    "name": "C-3P0",
+    "image": "/images/c3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chewbacca",
+    "image": "/images/chewy.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Emperor",
+    "image": "/images/emperor.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Ewok",
+    "image": "/images/ewok.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Greedo",
+    "image": "/images/greedo.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Han Solo",
+    "image": "/images/han.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Jabba The Hutt",
+    "image": "/images/jabba.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Lando Calrissian",
+    "image": "/images/lando.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Princess Leia",
+    "image": "/images/leia.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 12,
+    "name": "Luke Skywalker",
+    "image": "/images/luke.jpg"
+  },
+    {
+    "id": 13,
+    "name": "Obi-Wan Kenobi",
+    "image": "/images/obiwan.jpg"
+  },
+  {
+    "id": 14,
+    "name": "R2-D2",
+    "image": "/images/r2.jpg"
+  },
+    {
+    "id": 15,
+    "name": "Sand People",
+    "image": "/images/sand.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Slave Leia",
+    "image": "/images/slaveleia.jpg"
+  },
+    {
+    "id": 17,
+    "name": "Storm Trooper",
+    "image": "/images/storm.jpg"
+  },
+    {
+    "id": 18,
+    "name": "Tauntaun",
+    "image": "/images/tauntaun.jpg"
+  },
+   {
+    "id": 19,
+    "name": "Darth Vader",
+    "image": "/images/vader.jpg"
+  },
+   {
+    "id": 20,
+    "name": "Yoda",
+    "image": "/images/yoda.jpg"
+  }
+]

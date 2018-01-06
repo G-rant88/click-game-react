@@ -37,6 +37,18 @@ body{
 
 .sizing{
   width: 98%;
+  background-image: url("/images/bg.jpg");
+  border: 2px solid gray;
+}
+
+.content{
+  background-image: url("/images/bg.jpg");
+}
+
+.sizing:hover{
+
+  border: 2px solid dodgerblue;
+
 }
 
 
