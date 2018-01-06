@@ -1,4 +1,4 @@
-<h1>Welcome To The Star Wars React Click Game!</h1>
+<h1>Welcome to The Star Wars React Click Game!</h1>
 <h4>The deployed app is <a href="https://g-rant88.github.io/click-game-react/">HERE</a>
 <h3>Features:</h3>
 <ul>
