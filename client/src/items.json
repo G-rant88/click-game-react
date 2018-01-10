@@ -2,122 +2,122 @@
   {
     "id": 0,
     "name": "Admiral Ackbar",
-    "image": "/click-game-react/images/akbar.jpg",
+    "image": "/images/akbar.jpg",
     "clicked": false
   },
   {
     "id": 1,
     "name": "Boba Fett",
-    "image": "/click-game-react/images/boba.jpg",
+    "image": "/images/boba.jpg",
     "clicked": false
 
   },
   {
     "id": 2,
     "name": "C-3P0",
-    "image": "/click-game-react/images/c3.jpg",
+    "image": "/images/c3.jpg",
     "clicked": false
   },
   {
     "id": 3,
     "name": "Chewbacca",
-    "image": "/click-game-react/images/chewy.jpg",
+    "image": "/images/chewy.jpg",
     "clicked": false
   },
   {
     "id": 4,
     "name": "Emperor",
-    "image": "/click-game-react/images/emperor.jpeg",
+    "image": "/images/emperor.jpeg",
     "clicked": false
   },
   {
     "id": 5,
     "name": "Ewok",
-    "image": "/click-game-react/images/ewok.jpg",
+    "image": "/images/ewok.jpg",
     "clicked": false
   },
   {
     "id": 6,
     "name": "Greedo",
-    "image": "/click-game-react/images/greedo.jpg",
+    "image": "/images/greedo.jpg",
     "clicked": false
   },
   {
     "id": 7,
     "name": "Han Solo",
-    "image": "/click-game-react/images/han.jpg",
+    "image": "/images/han.jpg",
     "clicked": false
   },
   {
     "id": 8,
     "name": "Jabba The Hutt",
-    "image": "/click-game-react/images/jabba.jpg",
+    "image": "/images/jabba.jpg",
     "clicked": false
   },
   {
     "id": 9,
     "name": "Lando Calrissian",
-    "image": "/click-game-react/images/lando.jpg",
+    "image": "/images/lando.jpg",
     "clicked": false
   },
   {
     "id": 10,
     "name": "Princess Leia",
-    "image": "/click-game-react/images/leia.jpg",
+    "image": "/images/leia.jpg",
     "clicked": false
   },
   {
     "id": 11,
     "name": "Luke Skywalker",
-    "image": "/click-game-react/images/luke.jpg",
+    "image": "/images/luke.jpg",
     "clicked": false
   },
     {
     "id": 12,
     "name": "Obi-Wan Kenobi",
-    "image": "/click-game-react/images/obiwan.jpg",
+    "image": "/images/obiwan.jpg",
     "clicked": false
   },
   {
     "id": 13,
     "name": "R2-D2",
-    "image": "/click-game-react/images/r2.jpg",
+    "image": "/images/r2.jpg",
     "clicked": false
   },
     {
     "id": 14,
     "name": "Sand People",
-    "image": "/click-game-react/images/sand.jpg",
+    "image": "/images/sand.jpg",
     "clicked": false
   },
   {
     "id": 15,
     "name": "Slave Leia",
-    "image": "/click-game-react/images/slaveleia.jpg",
+    "image": "/images/slaveleia.jpg",
     "clicked": false
   },
     {
     "id": 16,
     "name": "Storm Trooper",
-    "image": "/click-game-react/images/storm.jpg",
+    "image": "/images/storm.jpg",
     "clicked": false
   },
     {
     "id": 17,
     "name": "Tauntaun",
-    "image": "/click-game-react/images/tauntaun.jpg",
+    "image": "/images/tauntaun.jpg",
     "clicked": false
   },
    {
     "id": 18,
     "name": "Darth Vader",
-    "image": "/click-game-react/images/vader.jpg",
+    "image": "/images/vader.jpg",
     "clicked": false
   },
    {
     "id": 19,
     "name": "Yoda",
-    "image": "/click-game-react/images/yoda.jpg",
+    "image": "/images/yoda.jpg",
     "clicked": false
   }
 ]

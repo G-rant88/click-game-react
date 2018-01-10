@@ -3,6 +3,10 @@ import './App.css';
 import items from "./items.json";
 import ItemCard from "./components/itemCard.js";
 
+    var style ={
+
+	color: "white"
+}
 
 class App extends Component {
 
@@ -10,7 +14,8 @@ state = {
     items,
     Score: 0,
     TopScore: 0,
-    correct: ""
+    correct: "",
+    color: "white"
   };
 
     shuffleItems = () => {
@@ -32,6 +37,12 @@ state = {
 
      this.state.correct = "Wrong Choice!";
 
+     style ={
+
+	color: "red"
+}
+
+
   if(this.state.Score > this.state.TopScore){
      this.state.TopScore = this.state.Score;
    }
@@ -51,6 +62,11 @@ for (let i = 0; i < items.length; i++) {
    this.state.Score = this.state.Score + 1;
    this.state.correct = "Correct Choice!";
 
+    style ={
+
+	color: "white"
+}
+
    items[value].clicked = true;
 
 
@@ -64,7 +80,7 @@ for (let i = 0; i < items.length; i++) {
        <nav>
     <div className="nav-wrapper">
       <a href="" className="brand-logo logo">Star Wars Game</a>
-      <a className="brand-logo center">{this.state.correct}</a>
+      <a className="brand-logo center" style={style}>{this.state.correct}</a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>Your Score: {this.state.Score}</li>
         <li>|</li>
