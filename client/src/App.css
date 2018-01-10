@@ -21,7 +21,7 @@ li{
 
 body{
 
-	background-image: url("/images/bg.jpg");
+	background-image: url("/click-game-react/images/bg.jpg");
 	background-image: stretch;
 }
 
@@ -36,12 +36,12 @@ body{
 
 .sizing{
   width: 98%;
-  background-image: url("/images/bg.jpg");
+  background-image: url("/click-game-react/images/bg.jpg");
   border: 2px solid gray;
 }
 
 .content{
-  background-image: url("/images/bg.jpg");
+  background-image: url("/click-game-react/images/bg.jpg");
 }
 
 .sizing:hover{
