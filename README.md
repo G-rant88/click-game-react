@@ -9,5 +9,5 @@
   <li>Your score will reset to 0</li>
   <li>A message will display in the navbar to tell you if your click was correct or wrong</li>
     </ul>
-<img src ="https://media.giphy.com/media/3ohjVaLJdwKF1ZUTsI/giphy.gif"/>
-<p>Full video demo <a href="https://www.youtube.com/watch?v=gtzCA2JXQgY&feature=youtu.be">HERE</a>
+<img src ="https://media.giphy.com/media/l3diRp2Qpt3ul2cRW/giphy.gif"/>
+<p>Full video demo <a href="https://youtu.be/0aSNQtfP7hQ">HERE</a>
