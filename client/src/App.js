@@ -16,6 +16,17 @@ const styles = {
   }
 }
 
+var color = {
+
+  color: "white"
+}
+
+const color2 = {
+
+  color: "crimson"
+}
+
+
   const addMessage = data => {
     console.log(data);
  
@@ -31,11 +42,11 @@ state = {
     Score: 0,
     TopScore: 0,
     correct: "",
-    user: "",
-    color: "white",
+    user: "Ben",
     shouldShake: false,
     newTopScore: false,
-    topUser: ""
+    topUser: "",
+    error: ""
   };
 
     socket = io("/");
@@ -59,22 +70,31 @@ state = {
 
      this.setState({
 
-     	correct: "Wrong Choice! Game Over!",
+     	correct: "Wrong! Game Over!",
      	shouldShake: true
      })
+
+    color = {
+
+  color: "crimson"
+}
        
-
-
 
   if(this.state.Score > this.state.TopScore){
      this.state.TopScore = this.state.Score;
 
         this.setState({
 
-     	correct: "Wrong Choice! New Top Score!!!",
+     	correct: "Wrong! New Top Score!",
      	shouldShake: true,
      	newTopScore: true
      })
+
+color = {
+
+  color: "gold"
+}
+  
        
    }
     this.setState({ Score: 0 });
@@ -91,7 +111,7 @@ for (let i = 0; i < items.length; i++) {
   
 
    this.state.Score = this.state.Score + 1;
-   this.state.correct = "Correct Choice! You Got a Point!";
+   this.state.correct = "Correct! You Got a Point!";
 
    items[value].clicked = true;
 
@@ -100,6 +120,11 @@ for (let i = 0; i < items.length; i++) {
     	shouldShake: false
 
     });
+
+    color = {
+
+  color: "limegreen"
+}
 
 
   };
@@ -111,7 +136,8 @@ for (let i = 0; i < items.length; i++) {
     this.setState({
       [name]: value
     });
-  };
+  }
+
 
 getUser = () => {
 
@@ -138,9 +164,11 @@ getUser = () => {
 
 
 	});
-}
+};
 
   score = () => {
+
+    if (this.state.topUser.match("^[a-zA-Z]{1,10}$") != null){
 
 const data = {
 
@@ -155,11 +183,17 @@ const data = {
 
 axios.post("/user", data).then( data => {
 
+    color = {
+
+  color: "white"
+}
+
 this.setState({
 
 	newTopScore: false,
-	correct: "Name Submitted! Click an Image to Play Again!",
+	correct: "Submitted! Play Again!",
 })
+
 
 this.getUser();
 
@@ -171,7 +205,17 @@ this.socket.emit('SEND_MESSAGE', {
 
 })
 
-  };
+  }
+
+  else {
+
+    this.setState({
+
+      error: "Invalid Name!"
+    })
+  }
+
+};
 
 componentDidMount(){
 
@@ -192,7 +236,7 @@ componentDidMount(){
        <nav>
     <div className="nav-wrapper">
       <a href="" className="brand-logo logo">Star Wars Game</a>
-      <a className="brand-logo center">{this.state.correct}</a>
+      <a className="brand-logo center" style={color}>{this.state.correct}</a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>Your Score: {this.state.Score}</li>
         <li>|</li>
@@ -219,6 +263,7 @@ componentDidMount(){
 <div className="row">
 <div className="col s12 center">
 <h4>Enter Your Name For the New Top Score!</h4>
+<h5 style={color2}>{this.state.error}</h5>
 </div>
 <form className="center">
  <div className="input-field col s6 offset-s3">
