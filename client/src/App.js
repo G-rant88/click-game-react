@@ -19,7 +19,8 @@ const styles = {
   const addMessage = data => {
     console.log(data);
  
- 	NotificationManager.success("User: " + data.user + " Score: " + data.score, 'NEW TOP SCORE!');
+ 	NotificationManager.success("User: " + data.user + " Score: " + data.score, 
+    'NEW TOP SCORE!');
 
 };
 
