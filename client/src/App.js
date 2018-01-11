@@ -26,7 +26,6 @@ const color2 = {
   color: "crimson"
 }
 
-
   const addMessage = data => {
     console.log(data);
  
@@ -52,13 +51,18 @@ state = {
     socket = io("/");
 
     shuffleItems = () => {
+
+    	console.time("test");
     
     const items = this.state.items.map(a =>
       [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
 
   this.setState({ items });
+
+  console.timeEnd("test");
   };
 
+	
 
   addScore = (val) => {
     
@@ -136,7 +140,8 @@ for (let i = 0; i < items.length; i++) {
     this.setState({
       [name]: value
     });
-  }
+
+  };
 
 
 getUser = () => {
@@ -170,41 +175,17 @@ getUser = () => {
 
     if (this.state.topUser.match("^[a-zA-Z]{1,10}$") != null){
 
-const data = {
-
-	user: this.state.topUser,
-	score: this.state.TopScore
-}
-
-	this.setState({
-
-		user: this.state.topUser
-	})
-
-axios.post("/user", data).then( data => {
-
-    color = {
-
-  color: "white"
-}
-
 this.setState({
+      user:this.state.topUser,
+      newTopScore: false,
+      correct: "Submitted! Play Again!"
+    });
 
-	newTopScore: false,
-	correct: "Submitted! Play Again!",
-})
-
-
-this.getUser();
-
-this.socket.emit('SEND_MESSAGE', {
+        this.socket.emit('SEND_MESSAGE', {
 
         user: this.state.topUser,
         score: this.state.TopScore
-    });
-
-})
-
+    });  
   }
 
   else {
@@ -217,17 +198,38 @@ this.socket.emit('SEND_MESSAGE', {
 
 };
 
+run = () => {
+
+      const data = {
+
+  user: this.state.topUser,
+  score: this.state.TopScore
+}
+
+axios.post("/user", data).then( data => {
+
+    color = {
+
+  color: "white"
+}
+
+ this.getUser();
+
+})
+}
+
 componentDidMount(){
 
 	this.getUser();
 
-	    this.socket.on('RECEIVE_MESSAGE', function(data){
+	 this.socket.on('RECEIVE_MESSAGE', (data) =>{
+
     addMessage(data);
+    this.run();
+
 });
 
 }
-
-
 
   render() {
     return (
