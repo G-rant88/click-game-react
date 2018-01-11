@@ -2,6 +2,7 @@
   "name": "click-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "aphrodite": "^1.2.5",
     "axios": "^0.17.1",
@@ -11,8 +12,10 @@
     "react-animations": "^1.0.0",
     "react-dom": "^16.2.0",
     "react-modal": "^3.1.10",
+    "react-notifications": "^1.4.3",
     "react-scripts": "1.0.17",
-    "react-shake-effect": "^1.0.1"
+    "react-shake-effect": "^1.0.1",
+    "socket.io-client": "^2.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

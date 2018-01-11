@@ -5,6 +5,9 @@ import ItemCard from "./components/itemCard.js";
 import { shake } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import axios from 'axios';
+import io from "socket.io-client";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 const styles = {
   shake: {
@@ -12,6 +15,13 @@ const styles = {
     animationName: Radium.keyframes(shake, 'shake')
   }
 }
+
+  const addMessage = data => {
+    console.log(data);
+ 
+ 	NotificationManager.success("User: " + data.user + "Score: " + data.score, 'NEW TOP SCORE!');
+
+};
 
 
 class App extends Component {
@@ -21,12 +31,14 @@ state = {
     Score: 0,
     TopScore: 0,
     correct: "",
-    user: "Ben",
+    user: "",
     color: "white",
     shouldShake: false,
     newTopScore: false,
     topUser: ""
   };
+
+    socket = io("/");
 
     shuffleItems = () => {
     
@@ -107,18 +119,23 @@ getUser = () => {
 	axios.get("/users").then(data => {
 
 		console.log("test");
-		console.log(data);
+		console.log(data.data.user[0]);
 
-		// for (var i = 0; i < data.length; i++) {
+		for (var i = 0; i < data.data.user.length; i++) {
+
+
+			if (data.data.user[i].score > this.state.TopScore){
+
+				this.setState({
+
+					TopScore: data.data.user[i].score,
+					user: data.data.user[i].user
+				})
+			}
 		
 
-		// }
+		}
 
-		// this.setState({
-
-		// 	user: data.user,
-		// 	TopScore: data.score
-		// })
 
 	});
 }
@@ -144,6 +161,13 @@ this.setState({
 	correct: "Name Submitted! Click an Image to Play Again!",
 })
 
+this.getUser();
+
+this.socket.emit('SEND_MESSAGE', {
+
+        user: this.state.topUser,
+        score: this.state.TopScore
+    });
 
 })
 
@@ -152,6 +176,11 @@ this.setState({
 componentDidMount(){
 
 	this.getUser();
+
+	    this.socket.on('RECEIVE_MESSAGE', function(data){
+    addMessage(data);
+});
+
 }
 
 
@@ -175,6 +204,7 @@ componentDidMount(){
   </div>
   <div className="container">
  
+   <NotificationContainer/>
 
 <div className="row">
 <div className="col s12 top z-depth-2">
