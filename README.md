@@ -1,4 +1,4 @@
-<h1>Welcome to The Star Wars React Click Game!</h1>
+<h1>Welcome to The Star Wars MERN React, Mongodb, Socket.io Click Game!</h1>
 <h4>The deployed app is <a href="https://mern-socket-click.herokuapp.com/">HERE</a>
 <h3>Features:</h3>
 <ul>
