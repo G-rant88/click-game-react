@@ -36,8 +36,8 @@ body{
 }
 
 .sizing{
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   margin-bottom: 20px;
   background-image: url("/images/bg.jpg");
   border: 2px solid gray;
